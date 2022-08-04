@@ -1,0 +1,149 @@
+{
+  "data_movement_tag_details" : [],
+  "data" : [
+    {
+      "data_movement_name" : "Pre_cond_pipeline",
+      "description" : "",
+      "destination_dataplace_name" : "hive_ingest_db",
+      "destination_schema_name" : "ingestion_foundation",
+      "ingestion_connection_type" : null,
+      "ingestion_table_format" : {
+        "database_name" : true,
+        "prefix" : true,
+        "prefix_value" : "cond",
+        "schema_name" : true
+      },
+      "workflow_engine_name" : "CS2008_engine",
+      "compute_engine_name" : "engine_CS2008",
+      "compute_engine_details" : {
+        "compute_engine_name" : "engine_CS2008",
+        "engine_type" : "Spark",
+        "engine_sub_type" : "CDH-compute_cs"
+      },
+      "source_type" : "hive",
+      "destination_type" : "hive",
+      "bot_priority" : "Default",
+      "advance_table_options" : [
+        {
+          "columns_options" : {
+            "virtual_column" : []
+          },
+          "CDC" : {
+            "audit_columns" : {
+              "prev_process_id_column_name" : "prev_process_id",
+              "end_date_column_name" : "valid_to_ts",
+              "process_id_column_name" : "process_id",
+              "start_date_column_name" : "valid_from_ts"
+            },
+            "CDC_process_type" : "",
+            "add_audit_columns" : false,
+            "CDC_type" : "",
+            "create_view" : false,
+            "hash_type" : "",
+            "view_name" : "v_part_test2"
+          },
+          "sort_by_columns" : [],
+          "CDC_columns_ids" : null,
+          "incremental_load" : {
+            "condition_values" : [],
+            "where_clause" : ""
+          },
+          "columns" : [
+            "sec",
+            "name",
+            "id"
+          ],
+          "parallel_ingestion" : {
+            "max_connections" : 1,
+            "enable" : true
+          },
+          "remove_duplicates" : {
+            "sort_columns" : [],
+            "key_columns" : []
+          },
+          "schema_name" : "vcs2008",
+          "reorder_columns" : null,
+          "table_name" : "part_test2",
+          "parallel_hash_ingestion" : {
+            "max_connections" : 8,
+            "enable" : false
+          },
+          "excluded_columns" : null,
+          "modified_columns_names" : null,
+          "modified_columns" : null,
+          "ingestion_mode" : {
+            "mode" : "Drop & Re-create",
+            "enable" : true
+          },
+          "ingest_using_query" : {
+            "enable" : false,
+            "sql_query" : ""
+          },
+          "new_table_name" : "",
+          "dataplace_name" : "Hive_ cs2008",
+          "table_partitions" : []
+        }
+      ],
+      "flow_details" : {
+        "pipeline_retry" : false,
+        "ignore_data_types" : [],
+        "schema_drift" : {
+          "email_ids" : [],
+          "advanced_options_sub_type" : "drop_create_table",
+          "config" : {
+            "suffix" : "",
+            "timestamp" : ""
+          },
+          "enabled" : false
+        },
+        "skip_verification" : true,
+        "ignore_null_tables" : false,
+        "pre_conditions" : {
+          "pipeline_timeout" : 8,
+          "enabled" : false
+        },
+        "post_conditions" : {
+          "rest_api_details" : [],
+          "enabled" : false
+        },
+        "parallel_source_connections" : 10,
+        "destination_file_format" : "Parquet",
+        "verification_threshold" : "",
+        "retry_count" : 0,
+        "pipeline_flow_timeout" : 120,
+        "pipeline_details" : null,
+        "unsupported_data_types" : [
+          {
+            "asis" : [],
+            "null" : [],
+            "ignore" : [],
+            "customtext" : []
+          }
+        ]
+      },
+      "next_schedule_date" : null
+    }
+  ],
+  "data_movement_details" : [
+    {
+      "dataplace_name" : "Hive_ cs2008",
+      "schema_name" : "vcs2008",
+      "total_count" : 1,
+      "ingest_all_tables_views" : [
+        "T",
+        "V",
+        "M"
+      ],
+      "filters_list" : [
+        {
+          "filter_name" : "static",
+          "filter_value" : [
+            "part_test2"
+          ],
+          "filter_type" : "Static",
+          "priority_order" : 1
+        }
+      ]
+    }
+  ]
+}
