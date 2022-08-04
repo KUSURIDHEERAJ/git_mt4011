@@ -1,0 +1,424 @@
+{
+  "CurationPipeline" : [
+    {
+      "pipelineJson" : {
+        "pipeline_version" : "v0.901",
+        "linkToPortIdProperty" : "endPortId",
+        "is_pipeline_validated" : true,
+        "is_active" : true,
+        "nodeKeyProperty" : "nodeId",
+        "refresh_freq" : {
+          "consider_timezone" : false,
+          "cron_freq" : "0 31 14 4 8 ? 2022",
+          "cron_timezone" : "Asia/Calcutta",
+          "cron_type" : "one_time"
+        },
+        "linkToKeyProperty" : "toNodeId",
+        "source_records" : null,
+        "preview_records" : null,
+        "linkDataArray" : [
+          {
+            "endPortId" : 1004,
+            "data" : {
+              "schema" : {
+                "type" : "struct",
+                "fields" : [
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "productpatid",
+                    "type" : "string"
+                  }
+                ]
+              },
+              "preview_data" : {}
+            },
+            "originPortId" : 1002,
+            "toNodeId" : 100000002,
+            "linkType" : "schemalink",
+            "fromNodeId" : 100000001,
+            "link_id" : 10001
+          }
+        ],
+        "nodeDataArray" : [
+          {
+            "uiNodeOrder" : "1A",
+            "node_error_msg" : "",
+            "nodeVersion" : 1,
+            "nodeTypeId" : 1,
+            "nodeTypeUiConfig" : {
+              "acceptedPortProperties" : [
+                {
+                  "port_properties_id" : 1,
+                  "port_properties" : {
+                    "cursor" : "pointer",
+                    "porttype_name" : "blue",
+                    "fill" : "#3498db",
+                    "stroke" : "#3498db",
+                    "toLinkable" : true,
+                    "porttype_id" : 1,
+                    "fromLinkable" : false,
+                    "width" : 9,
+                    "alignment" : false,
+                    "alignment_properties" : {},
+                    "port_location" : "Left",
+                    "height" : 9,
+                    "acceptLinkTypes" : [
+                      {
+                        "node_linktype_id" : 1,
+                        "outputMinLinks" : 0,
+                        "inputMinLinks" : 0,
+                        "node_linktype_name" : "dottedlink",
+                        "inputMaxLinks" : 9999,
+                        "outputMaxLinks" : 0
+                      }
+                    ]
+                  }
+                },
+                {
+                  "port_properties_id" : 4,
+                  "port_properties" : {
+                    "cursor" : "pointer",
+                    "porttype_name" : "white",
+                    "fill" : "white",
+                    "stroke" : "gray",
+                    "toLinkable" : false,
+                    "porttype_id" : 2,
+                    "fromLinkable" : true,
+                    "width" : 15,
+                    "alignment" : false,
+                    "alignment_properties" : {},
+                    "port_location" : "Right",
+                    "height" : 15,
+                    "acceptLinkTypes" : [
+                      {
+                        "node_linktype_id" : 2,
+                        "outputMinLinks" : 1,
+                        "inputMinLinks" : 0,
+                        "node_linktype_name" : "schemalink",
+                        "inputMaxLinks" : 0,
+                        "outputMaxLinks" : 9999
+                      }
+                    ]
+                  }
+                }
+              ],
+              "initialLabel" : "JDBC Source",
+              "initialXPos" : 100,
+              "group_label" : "S",
+              "nodeGroupType" : "source",
+              "icon" : "jdbc.svg",
+              "groupLabel" : "Sources",
+              "node_properties_id" : 1,
+              "initialYPos" : 100,
+              "nodeGroupTypeId" : 2
+            },
+            "node_form_default_values" : {
+              "default_placeholder_value" : "0001-01-01",
+              "default_enable_hash_partition" : false,
+              "default_fetch_size" : 5000,
+              "default_query_timeout" : 0,
+              "default_number_of_hash_partitions" : 8
+            },
+            "node_execution" : "",
+            "node_metrics" : {
+              "records_count" : null,
+              "time_elapsed" : ""
+            },
+            "nodeTypeName" : "jdbc_source",
+            "outputLinks" : [
+              10001
+            ],
+            "is_node_validated" : true,
+            "configTypeId" : 144,
+            "inputLinks" : [],
+            "config" : {
+              "nodeName" : "JDBC Source 1",
+              "queryTimeout" : 0,
+              "sql_query_error_msg" : "",
+              "credential_name" : "jdbc_4010",
+              "connection_type" : "postgres",
+              "incremental_load" : [
+                {
+                  "max_column_name" : "",
+                  "place_holder" : "",
+                  "default_value" : "0001-01-01",
+                  "max_value" : false
+                }
+              ],
+              "description" : "",
+              "enable_hash_partition" : false,
+              "connection_type_id" : 1,
+              "credential_type_id" : 1,
+              "jdbc_url" : "jdbc:postgresql://w3.training5.modak.com:5432/training",
+              "tags" : [],
+              "credential_type" : "Username with password",
+              "driver" : "org.postgresql.Driver",
+              "jdbc_read_options" : [
+                {
+                  "value" : "10",
+                  "option" : "numPartitions"
+                }
+              ],
+              "fetchsize" : 5000,
+              "sql_query" : "select pp.prod_pat_id productPatId from tr5.product_patents pp \n",
+              "credential_id" : 2016,
+              "number_of_hash_partitions" : 8
+            },
+            "nodeId" : 100000001,
+            "nodeLabel" : "JDBC",
+            "nodeUiConfig" : {
+              "yPos" : -3.784795321637432,
+              "ports_info" : [
+                {
+                  "data" : {
+                    "schema" : {},
+                    "file_modified_ts" : ""
+                  },
+                  "port_properties_id" : 1,
+                  "port_id" : 1001,
+                  "port_location" : "Left"
+                },
+                {
+                  "data" : {
+                    "schema" : {
+                      "type" : "struct",
+                      "fields" : [
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "productpatid",
+                          "type" : "string"
+                        }
+                      ]
+                    },
+                    "file_modified_ts" : ""
+                  },
+                  "port_properties_id" : 4,
+                  "port_id" : 1002,
+                  "port_location" : "Right"
+                }
+              ],
+              "xPos" : -344.336454018227
+            },
+            "configTypeName" : "jdbc config form template"
+          },
+          {
+            "uiNodeOrder" : "2C",
+            "node_error_msg" : "",
+            "nodeVersion" : 1,
+            "nodeTypeId" : 9,
+            "nodeTypeUiConfig" : {
+              "acceptedPortProperties" : [
+                {
+                  "port_properties_id" : 2,
+                  "port_properties" : {
+                    "cursor" : "pointer",
+                    "porttype_name" : "blue",
+                    "fill" : "#3498db",
+                    "stroke" : "#3498db",
+                    "toLinkable" : false,
+                    "porttype_id" : 1,
+                    "fromLinkable" : true,
+                    "width" : 9,
+                    "alignment" : false,
+                    "alignment_properties" : {},
+                    "port_location" : "Right",
+                    "height" : 9,
+                    "acceptLinkTypes" : [
+                      {
+                        "node_linktype_id" : 1,
+                        "outputMinLinks" : 0,
+                        "inputMinLinks" : 0,
+                        "node_linktype_name" : "dottedlink",
+                        "inputMaxLinks" : 0,
+                        "outputMaxLinks" : 9999
+                      }
+                    ]
+                  }
+                },
+                {
+                  "port_properties_id" : 3,
+                  "port_properties" : {
+                    "cursor" : "pointer",
+                    "porttype_name" : "white",
+                    "fill" : "white",
+                    "stroke" : "gray",
+                    "toLinkable" : true,
+                    "porttype_id" : 2,
+                    "fromLinkable" : false,
+                    "width" : 15,
+                    "alignment" : false,
+                    "alignment_properties" : {},
+                    "port_location" : "Left",
+                    "height" : 15,
+                    "acceptLinkTypes" : [
+                      {
+                        "node_linktype_id" : 2,
+                        "outputMinLinks" : 0,
+                        "inputMinLinks" : 1,
+                        "node_linktype_name" : "schemalink",
+                        "inputMaxLinks" : 1,
+                        "outputMaxLinks" : 0
+                      }
+                    ]
+                  }
+                }
+              ],
+              "initialLabel" : "GCS Destination",
+              "initialXPos" : 100,
+              "group_label" : "T",
+              "nodeGroupType" : "destination",
+              "icon" : "gcs.svg",
+              "groupLabel" : "Destinations",
+              "node_properties_id" : 9,
+              "initialYPos" : 100,
+              "nodeGroupTypeId" : 3
+            },
+            "node_form_default_values" : {
+              "default_add_extension" : true,
+              "default_output_file_option_type" : "multiple",
+              "default_partition" : false,
+              "default_repartition" : true,
+              "default_include_header" : true,
+              "default_repartition_number" : 40,
+              "default_mode" : "overwrite"
+            },
+            "node_execution" : "",
+            "node_metrics" : {
+              "records_count" : null,
+              "time_elapsed" : ""
+            },
+            "nodeTypeName" : "gcs_destination",
+            "outputLinks" : [],
+            "is_node_validated" : true,
+            "configTypeId" : 207,
+            "inputLinks" : [
+              10001
+            ],
+            "config" : {
+              "nodeName" : "GCS Destination 1",
+              "destination_file_url" : "gs://modak-nabu-bucket/mt4010/testgcsatdes_3.csv",
+              "partitionby" : false,
+              "credential_name" : "gcs_4010",
+              "connection_type" : "gcs",
+              "description" : "",
+              "connection_type_id" : 9,
+              "credential_type_id" : 3,
+              "tags" : [],
+              "repartition_size" : 40,
+              "mode" : "overwrite",
+              "write_options" : [
+                {
+                  "value" : "",
+                  "option" : ""
+                }
+              ],
+              "credential_type" : "GCP",
+              "output_file_option_type" : "multiple",
+              "file_type" : "csv",
+              "partitionby_column" : [],
+              "header" : true,
+              "add_extension" : true,
+              "repartition" : true,
+              "credential_id" : 2024
+            },
+            "nodeId" : 100000002,
+            "nodeLabel" : "GCS",
+            "nodeUiConfig" : {
+              "yPos" : -10,
+              "ports_info" : [
+                {
+                  "data" : {
+                    "schema" : {},
+                    "file_modified_ts" : ""
+                  },
+                  "port_properties_id" : 2,
+                  "port_id" : 1003,
+                  "port_location" : "Right"
+                },
+                {
+                  "data" : {
+                    "schema" : {},
+                    "file_modified_ts" : ""
+                  },
+                  "port_properties_id" : 3,
+                  "port_id" : 1004,
+                  "port_location" : "Left"
+                }
+              ],
+              "xPos" : 20
+            },
+            "configTypeName" : "vue template gcs destination config Curation UI"
+          }
+        ],
+        "last_validation_ts" : "2022-08-04 14:28:42.481",
+        "linkFromKeyProperty" : "fromNodeId",
+        "pipelineId" : 4093,
+        "enable_cache" : true,
+        "pipeline_config" : {
+          "flow_details" : {
+            "post_conditions" : {
+              "rest_api_details" : [],
+              "enabled" : false
+            },
+            "spark_config" : {
+              "num_executors" : "2",
+              "executor_memory" : "20G",
+              "driver_memory" : "10G",
+              "solr_batch_size" : "10000",
+              "parallel_threads" : "10",
+              "fetch_size" : "50000",
+              "driver_cores" : "1",
+              "executor_cores" : "5",
+              "master" : "localhost"
+            },
+            "enable_spark_config" : false,
+            "pipeline_retry" : false,
+            "retry_count" : 3,
+            "extra_spark_config" : [],
+            "pipeline_flow_timeout" : 72,
+            "pre_conditions" : {
+              "pipeline_timeout" : 8,
+              "pipeline_details" : [],
+              "enabled" : false
+            },
+            "email_notification" : {
+              "on_failure" : [],
+              "failure_email_check" : false,
+              "on_success" : [],
+              "same_as_success_email_check" : false,
+              "success_email_check" : false
+            }
+          },
+          "pipeline_error_msg" : "",
+          "description" : "",
+          "workflow_engine_name" : "RPC_workflow_engine",
+          "contact_info" : {
+            "owner" : "MT4010",
+            "email" : "akhil.komati@modak.com"
+          },
+          "pipeline_form_default_values" : {
+            "default_pipeline_retry" : false,
+            "default_pipeline_flow_timeout" : 24,
+            "default_retry_count" : 0
+          },
+          "pipeline_name" : "datasource_test",
+          "tags" : [],
+          "compute_engine_name" : "RPC_compute_engine",
+          "workspace_pipeline_type_id" : 1,
+          "engine_type" : "Spark",
+          "workflow_engine_id" : 28,
+          "engine_sub_type" : "Standalone-Almaren",
+          "engine_type_id" : 2,
+          "workspace_pipeline_type_name" : "batch",
+          "compute_engine_id" : 489,
+          "engine_sub_type_id" : 34
+        },
+        "linkFromPortIdProperty" : "originPortId",
+        "class" : "go.GraphLinksModel"
+      },
+      "tags" : []
+    }
+  ]
+}
