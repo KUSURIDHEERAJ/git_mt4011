@@ -1,0 +1,507 @@
+{
+  "CurationPipeline" : [
+    {
+      "pipelineJson" : {
+        "pipeline_version" : "v0.901",
+        "linkToPortIdProperty" : "endPortId",
+        "is_pipeline_validated" : false,
+        "nodeKeyProperty" : "nodeId",
+        "is_active" : true,
+        "refresh_freq" : {
+          "consider_timezone" : false,
+          "cron_freq" : "0 55 11 1 8 ? 2022",
+          "cron_timezone" : "Asia/Calcutta",
+          "cron_type" : "one_time"
+        },
+        "linkToKeyProperty" : "toNodeId",
+        "preview_records" : null,
+        "source_records" : null,
+        "nodeDataArray" : [
+          {
+            "uiNodeOrder" : "1C",
+            "node_error_msg" : "",
+            "nodeVersion" : 1,
+            "nodeTypeId" : 3,
+            "node_form_default_values" : {
+              "default_infer_schema" : true,
+              "default_records_to_infer_schema" : 1,
+              "default_header" : true
+            },
+            "nodeTypeUiConfig" : {
+              "acceptedPortProperties" : [
+                {
+                  "port_properties_id" : 1,
+                  "port_properties" : {
+                    "cursor" : "pointer",
+                    "porttype_name" : "blue",
+                    "fill" : "#3498db",
+                    "stroke" : "#3498db",
+                    "toLinkable" : true,
+                    "porttype_id" : 1,
+                    "fromLinkable" : false,
+                    "width" : 9,
+                    "alignment" : false,
+                    "alignment_properties" : {},
+                    "port_location" : "Left",
+                    "height" : 9,
+                    "acceptLinkTypes" : [
+                      {
+                        "node_linktype_id" : 1,
+                        "outputMinLinks" : 0,
+                        "inputMinLinks" : 0,
+                        "node_linktype_name" : "dottedlink",
+                        "inputMaxLinks" : 9999,
+                        "outputMaxLinks" : 0
+                      }
+                    ]
+                  }
+                },
+                {
+                  "port_properties_id" : 4,
+                  "port_properties" : {
+                    "cursor" : "pointer",
+                    "porttype_name" : "white",
+                    "fill" : "white",
+                    "stroke" : "gray",
+                    "toLinkable" : false,
+                    "porttype_id" : 2,
+                    "fromLinkable" : true,
+                    "width" : 15,
+                    "alignment" : false,
+                    "alignment_properties" : {},
+                    "port_location" : "Right",
+                    "height" : 15,
+                    "acceptLinkTypes" : [
+                      {
+                        "node_linktype_id" : 2,
+                        "outputMinLinks" : 1,
+                        "inputMinLinks" : 0,
+                        "node_linktype_name" : "schemalink",
+                        "inputMaxLinks" : 0,
+                        "outputMaxLinks" : 9999
+                      }
+                    ]
+                  }
+                }
+              ],
+              "initialLabel" : "GCS Source",
+              "initialXPos" : 100,
+              "nodeGroupType" : "source",
+              "group_label" : "S",
+              "icon" : "gcs.svg",
+              "node_properties_id" : 3,
+              "groupLabel" : "Sources",
+              "initialYPos" : 100,
+              "nodeGroupTypeId" : 2
+            },
+            "node_execution" : "",
+            "node_metrics" : {
+              "records_count" : null,
+              "time_elapsed" : ""
+            },
+            "nodeTypeName" : "gcs_source",
+            "outputLinks" : [
+              10001
+            ],
+            "is_node_validated" : true,
+            "configTypeId" : 211,
+            "inputLinks" : [],
+            "nodeId" : 100000001,
+            "nodeLabel" : "GCS",
+            "config" : {
+              "nodeName" : "GCS Source 1",
+              "credential_name" : "Google_cloud_mt4011",
+              "connection_type" : "gcs",
+              "columns_info" : [],
+              "source_file_url" : "gs://modak-nabu-bucket/mt4011testing/product_patents.csv",
+              "description" : "",
+              "infer_schema" : false,
+              "connection_type_id" : 9,
+              "credential_type_id" : 3,
+              "read_options" : [
+                {
+                  "value" : ",",
+                  "option" : "delimiter"
+                },
+                {
+                  "value" : "\\",
+                  "option" : "escape"
+                },
+                {
+                  "value" : "\\n",
+                  "option" : "lineSep"
+                },
+                {
+                  "value" : "\"",
+                  "option" : "quote"
+                }
+              ],
+              "tags" : [],
+              "credential_type" : "GCP",
+              "file_type" : "csv",
+              "header" : true,
+              "credential_id" : 2134
+            },
+            "nodeUiConfig" : {
+              "yPos" : 20,
+              "ports_info" : [
+                {
+                  "data" : {
+                    "schema" : {},
+                    "file_modified_ts" : ""
+                  },
+                  "port_properties_id" : 1,
+                  "port_id" : 1001,
+                  "port_location" : "Left"
+                },
+                {
+                  "data" : {
+                    "schema" : {
+                      "type" : "struct",
+                      "fields" : [
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "prod_pat_id",
+                          "type" : "string"
+                        },
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "product_id",
+                          "type" : "string"
+                        },
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "patent_no",
+                          "type" : "string"
+                        },
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "patent_expire_date",
+                          "type" : "string"
+                        },
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "drug_substance_flag",
+                          "type" : "string"
+                        },
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "drug_product_flag",
+                          "type" : "string"
+                        },
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "patent_use_code",
+                          "type" : "string"
+                        },
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "delist_flag",
+                          "type" : "string"
+                        }
+                      ]
+                    },
+                    "file_modified_ts" : ""
+                  },
+                  "port_properties_id" : 4,
+                  "port_id" : 1002,
+                  "port_location" : "Right"
+                }
+              ],
+              "xPos" : -390
+            },
+            "configTypeName" : "vue template gcs source config Curation UI"
+          },
+          {
+            "uiNodeOrder" : "2F",
+            "node_error_msg" : "",
+            "nodeVersion" : 1,
+            "nodeTypeId" : 12,
+            "node_form_default_values" : {
+              "default_add_extension" : true,
+              "default_output_file_option_type" : "multiple",
+              "default_include_header" : true,
+              "default_partition" : false,
+              "default_repartition" : true,
+              "default_repartition_number" : 40,
+              "default_mode" : "overwrite"
+            },
+            "nodeTypeUiConfig" : {
+              "acceptedPortProperties" : [
+                {
+                  "port_properties_id" : 2,
+                  "port_properties" : {
+                    "cursor" : "pointer",
+                    "porttype_name" : "blue",
+                    "fill" : "#3498db",
+                    "stroke" : "#3498db",
+                    "toLinkable" : false,
+                    "porttype_id" : 1,
+                    "fromLinkable" : true,
+                    "width" : 9,
+                    "alignment" : false,
+                    "alignment_properties" : {},
+                    "port_location" : "Right",
+                    "height" : 9,
+                    "acceptLinkTypes" : [
+                      {
+                        "node_linktype_id" : 1,
+                        "outputMinLinks" : 0,
+                        "inputMinLinks" : 0,
+                        "node_linktype_name" : "dottedlink",
+                        "inputMaxLinks" : 0,
+                        "outputMaxLinks" : 9999
+                      }
+                    ]
+                  }
+                },
+                {
+                  "port_properties_id" : 3,
+                  "port_properties" : {
+                    "cursor" : "pointer",
+                    "porttype_name" : "white",
+                    "fill" : "white",
+                    "stroke" : "gray",
+                    "toLinkable" : true,
+                    "porttype_id" : 2,
+                    "fromLinkable" : false,
+                    "width" : 15,
+                    "alignment" : false,
+                    "alignment_properties" : {},
+                    "port_location" : "Left",
+                    "height" : 15,
+                    "acceptLinkTypes" : [
+                      {
+                        "node_linktype_id" : 2,
+                        "outputMinLinks" : 0,
+                        "inputMinLinks" : 1,
+                        "node_linktype_name" : "schemalink",
+                        "inputMaxLinks" : 1,
+                        "outputMaxLinks" : 0
+                      }
+                    ]
+                  }
+                }
+              ],
+              "initialLabel" : "ADLS GEN2 Destination",
+              "initialXPos" : 100,
+              "nodeGroupType" : "destination",
+              "group_label" : "T",
+              "icon" : "adlsgen2.svg",
+              "node_properties_id" : 12,
+              "groupLabel" : "Destinations",
+              "initialYPos" : 100,
+              "nodeGroupTypeId" : 3
+            },
+            "node_execution" : "",
+            "node_metrics" : {
+              "records_count" : null,
+              "time_elapsed" : ""
+            },
+            "nodeTypeName" : "adls_gen2_destination",
+            "outputLinks" : [],
+            "is_node_validated" : false,
+            "configTypeId" : 209,
+            "inputLinks" : [
+              10001
+            ],
+            "nodeId" : 100000002,
+            "nodeLabel" : "ADLS GEN2",
+            "config" : {
+              "nodeName" : "ADLS GEN2 Destination 1",
+              "destination_file_url" : "abfss://testingmt4011@nabusparkingestion.dfs.core.windows.net/testingmt4011/partitionstest.csv",
+              "partitionby" : false,
+              "credential_name" : "ADLS_Gen_2_mt4011",
+              "connection_type" : "adls_gen2",
+              "description" : "",
+              "connection_type_id" : 18,
+              "credential_type_id" : 5,
+              "repartition_size" : 40,
+              "tags" : [],
+              "write_options" : [
+                {
+                  "value" : "true",
+                  "option" : "ignoreLeadingWhiteSpace"
+                }
+              ],
+              "mode" : "append",
+              "credential_type" : "Azure Data Lake Storage Gen 2",
+              "output_file_option_type" : "single",
+              "file_type" : "csv",
+              "partitionby_column" : [],
+              "header" : true,
+              "add_extension" : true,
+              "repartition" : true,
+              "credential_id" : 2048
+            },
+            "nodeUiConfig" : {
+              "yPos" : -70,
+              "ports_info" : [
+                {
+                  "data" : {
+                    "schema" : {},
+                    "file_modified_ts" : ""
+                  },
+                  "port_properties_id" : 2,
+                  "port_id" : 1003,
+                  "port_location" : "Right"
+                },
+                {
+                  "data" : {
+                    "schema" : {},
+                    "file_modified_ts" : ""
+                  },
+                  "port_properties_id" : 3,
+                  "port_id" : 1004,
+                  "port_location" : "Left"
+                }
+              ],
+              "xPos" : 120
+            },
+            "configTypeName" : "vue template adls gen2 destination config Curation UI"
+          }
+        ],
+        "linkDataArray" : [
+          {
+            "endPortId" : 1004,
+            "data" : {
+              "schema" : {
+                "type" : "struct",
+                "fields" : [
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "prod_pat_id",
+                    "type" : "string"
+                  },
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "product_id",
+                    "type" : "string"
+                  },
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "patent_no",
+                    "type" : "string"
+                  },
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "patent_expire_date",
+                    "type" : "string"
+                  },
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "drug_substance_flag",
+                    "type" : "string"
+                  },
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "drug_product_flag",
+                    "type" : "string"
+                  },
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "patent_use_code",
+                    "type" : "string"
+                  },
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "delist_flag",
+                    "type" : "string"
+                  }
+                ]
+              },
+              "preview_data" : {}
+            },
+            "originPortId" : 1002,
+            "toNodeId" : 100000002,
+            "linkType" : "schemalink",
+            "fromNodeId" : 100000001,
+            "link_id" : 10001
+          }
+        ],
+        "last_validation_ts" : null,
+        "linkFromKeyProperty" : "fromNodeId",
+        "pipelineId" : 3981,
+        "enable_cache" : true,
+        "pipeline_config" : {
+          "flow_details" : {
+            "post_conditions" : {
+              "rest_api_details" : [],
+              "enabled" : false
+            },
+            "enable_spark_config" : false,
+            "spark_config" : {
+              "num_executors" : "2",
+              "executor_memory" : "20G",
+              "driver_memory" : "10G",
+              "solr_batch_size" : "10000",
+              "parallel_threads" : "10",
+              "fetch_size" : "50000",
+              "driver_cores" : "1",
+              "executor_cores" : "5",
+              "master" : "localhost"
+            },
+            "pipeline_retry" : false,
+            "retry_count" : 3,
+            "pipeline_flow_timeout" : 72,
+            "extra_spark_config" : [],
+            "pre_conditions" : {
+              "pipeline_timeout" : 8,
+              "pipeline_details" : [],
+              "enabled" : false
+            },
+            "email_notification" : {
+              "on_failure" : [],
+              "failure_email_check" : false,
+              "on_success" : [],
+              "same_as_success_email_check" : false,
+              "success_email_check" : false
+            }
+          },
+          "pipeline_error_msg" : "",
+          "description" : "",
+          "workflow_engine_name" : "RPC_workflow_engine",
+          "contact_info" : {
+            "owner" : "MT4011",
+            "email" : "dheeraj.kusuri@modak.com"
+          },
+          "pipeline_form_default_values" : {
+            "default_pipeline_retry" : false,
+            "default_pipeline_flow_timeout" : 24,
+            "default_retry_count" : 0
+          },
+          "pipeline_name" : "gcs_vetest_mt4011_2",
+          "tags" : [],
+          "workspace_pipeline_type_id" : 1,
+          "compute_engine_name" : "RPC_compute_engine",
+          "engine_type" : "Spark",
+          "workflow_engine_id" : 28,
+          "engine_sub_type" : "Standalone-Almaren",
+          "engine_type_id" : 2,
+          "workspace_pipeline_type_name" : "batch",
+          "compute_engine_id" : 489,
+          "engine_sub_type_id" : 34
+        },
+        "linkFromPortIdProperty" : "originPortId",
+        "class" : "go.GraphLinksModel"
+      },
+      "tags" : []
+    }
+  ]
+}
