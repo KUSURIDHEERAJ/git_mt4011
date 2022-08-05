@@ -1,0 +1,366 @@
+{
+  "CurationPipeline" : [
+    {
+      "pipelineJson" : {
+        "linkToPortIdProperty" : "endPortId",
+        "is_pipeline_validated" : false,
+        "nodeKeyProperty" : "nodeId",
+        "is_active" : true,
+        "refresh_freq" : {
+          "consider_timezone" : false,
+          "cron_freq" : "0 50 13 8 7 ? 2022",
+          "cron_timezone" : "Asia/Calcutta",
+          "cron_type" : "one_time"
+        },
+        "linkToKeyProperty" : "toNodeId",
+        "preview_records" : null,
+        "source_records" : null,
+        "nodeDataArray" : [
+          {
+            "uiNodeOrder" : "1C",
+            "node_error_msg" : "",
+            "nodeVersion" : 1,
+            "nodeTypeId" : 3,
+            "nodeTypeUiConfig" : {
+              "acceptedPortProperties" : [
+                {
+                  "port_properties_id" : 1,
+                  "port_properties" : {
+                    "cursor" : "pointer",
+                    "porttype_name" : "blue",
+                    "fill" : "#3498db",
+                    "stroke" : "#3498db",
+                    "toLinkable" : true,
+                    "porttype_id" : 1,
+                    "fromLinkable" : false,
+                    "width" : 9,
+                    "alignment" : false,
+                    "alignment_properties" : {},
+                    "port_location" : "Left",
+                    "height" : 9,
+                    "acceptLinkTypes" : [
+                      {
+                        "node_linktype_id" : 1,
+                        "outputMinLinks" : 0,
+                        "inputMinLinks" : 0,
+                        "node_linktype_name" : "dottedlink",
+                        "inputMaxLinks" : 9999,
+                        "outputMaxLinks" : 0
+                      }
+                    ]
+                  }
+                },
+                {
+                  "port_properties_id" : 4,
+                  "port_properties" : {
+                    "cursor" : "pointer",
+                    "porttype_name" : "white",
+                    "fill" : "white",
+                    "stroke" : "gray",
+                    "toLinkable" : false,
+                    "porttype_id" : 2,
+                    "fromLinkable" : true,
+                    "width" : 15,
+                    "alignment" : false,
+                    "alignment_properties" : {},
+                    "port_location" : "Right",
+                    "height" : 15,
+                    "acceptLinkTypes" : [
+                      {
+                        "node_linktype_id" : 2,
+                        "outputMinLinks" : 1,
+                        "inputMinLinks" : 0,
+                        "node_linktype_name" : "schemalink",
+                        "inputMaxLinks" : 0,
+                        "outputMaxLinks" : 9999
+                      }
+                    ]
+                  }
+                }
+              ],
+              "initialLabel" : "GCS Source",
+              "initialXPos" : 100,
+              "nodeGroupType" : "source",
+              "group_label" : "S",
+              "icon" : "gcs.svg",
+              "node_properties_id" : 3,
+              "groupLabel" : "Sources",
+              "initialYPos" : 100,
+              "nodeGroupTypeId" : 2
+            },
+            "node_execution" : "",
+            "node_metrics" : {
+              "records_count" : null,
+              "time_elapsed" : ""
+            },
+            "nodeTypeName" : "gcs_source",
+            "outputLinks" : [
+              10001
+            ],
+            "is_node_validated" : false,
+            "configTypeId" : 211,
+            "inputLinks" : [],
+            "nodeId" : 100000001,
+            "nodeLabel" : "GCS",
+            "config" : {
+              "nodeName" : "GCS Source 1",
+              "credential_name" : "Google_Cloud_Platform_mt4011",
+              "connection_type" : "gcs",
+              "columns_info" : [],
+              "source_file_url" : "gs://modak-nabu-bucket/mt4011testing/product_patents.avro",
+              "description" : "",
+              "infer_schema" : false,
+              "connection_type_id" : 9,
+              "credential_type_id" : 3,
+              "read_options" : [
+                {
+                  "value" : "",
+                  "option" : ""
+                }
+              ],
+              "credential_type" : "GCP",
+              "file_type" : "avro",
+              "header" : true,
+              "credential_id" : 2026
+            },
+            "nodeUiConfig" : {
+              "yPos" : 60,
+              "ports_info" : [
+                {
+                  "data" : {
+                    "schema" : {}
+                  },
+                  "port_properties_id" : 1,
+                  "port_id" : 1001,
+                  "port_location" : "Left"
+                },
+                {
+                  "data" : {
+                    "schema" : {}
+                  },
+                  "port_properties_id" : 4,
+                  "port_id" : 1002,
+                  "port_location" : "Right"
+                }
+              ],
+              "xPos" : -350
+            },
+            "configTypeName" : "vue template gcs source config Curation UI"
+          },
+          {
+            "uiNodeOrder" : "2E",
+            "node_error_msg" : "",
+            "nodeVersion" : 1,
+            "nodeTypeId" : 11,
+            "nodeTypeUiConfig" : {
+              "acceptedPortProperties" : [
+                {
+                  "port_properties_id" : 2,
+                  "port_properties" : {
+                    "cursor" : "pointer",
+                    "porttype_name" : "blue",
+                    "fill" : "#3498db",
+                    "stroke" : "#3498db",
+                    "toLinkable" : false,
+                    "porttype_id" : 1,
+                    "fromLinkable" : true,
+                    "width" : 9,
+                    "alignment" : false,
+                    "alignment_properties" : {},
+                    "port_location" : "Right",
+                    "height" : 9,
+                    "acceptLinkTypes" : [
+                      {
+                        "node_linktype_id" : 1,
+                        "outputMinLinks" : 0,
+                        "inputMinLinks" : 0,
+                        "node_linktype_name" : "dottedlink",
+                        "inputMaxLinks" : 0,
+                        "outputMaxLinks" : 9999
+                      }
+                    ]
+                  }
+                },
+                {
+                  "port_properties_id" : 3,
+                  "port_properties" : {
+                    "cursor" : "pointer",
+                    "porttype_name" : "white",
+                    "fill" : "white",
+                    "stroke" : "gray",
+                    "toLinkable" : true,
+                    "porttype_id" : 2,
+                    "fromLinkable" : false,
+                    "width" : 15,
+                    "alignment" : false,
+                    "alignment_properties" : {},
+                    "port_location" : "Left",
+                    "height" : 15,
+                    "acceptLinkTypes" : [
+                      {
+                        "node_linktype_id" : 2,
+                        "outputMinLinks" : 0,
+                        "inputMinLinks" : 1,
+                        "node_linktype_name" : "schemalink",
+                        "inputMaxLinks" : 1,
+                        "outputMaxLinks" : 0
+                      }
+                    ]
+                  }
+                }
+              ],
+              "initialLabel" : "ADLS GEN1 Destination",
+              "initialXPos" : 100,
+              "nodeGroupType" : "destination",
+              "group_label" : "T",
+              "icon" : "adlsgen1.svg",
+              "node_properties_id" : 11,
+              "groupLabel" : "Destinations",
+              "initialYPos" : 100,
+              "nodeGroupTypeId" : 3
+            },
+            "node_execution" : "",
+            "node_metrics" : {
+              "records_count" : null,
+              "time_elapsed" : ""
+            },
+            "nodeTypeName" : "adls_gen1_destination",
+            "outputLinks" : [],
+            "is_node_validated" : false,
+            "configTypeId" : 208,
+            "inputLinks" : [
+              10001
+            ],
+            "nodeId" : 100000002,
+            "nodeLabel" : "ADLS GEN1",
+            "config" : {
+              "nodeName" : "ADLS GEN1 Destination 1",
+              "destination_file_url" : "adl://nabusparkgen1.azuredatalakestore.net/testing_mt4011_dest/product_patents.avro",
+              "partitionby" : false,
+              "credential_name" : "ADLS_Gen_1_mt4011",
+              "connection_type" : "adls_gen1",
+              "description" : "",
+              "connection_type_id" : 19,
+              "credential_type_id" : 6,
+              "repartition_size" : 40,
+              "write_options" : [
+                {
+                  "value" : "",
+                  "option" : ""
+                }
+              ],
+              "mode" : "overwrite",
+              "credential_type" : "Azure Data Lake Storage Gen 1",
+              "file_type" : "avro",
+              "partitionby_column" : "",
+              "header" : null,
+              "add_extension" : true,
+              "repartition" : false,
+              "credential_id" : 2073
+            },
+            "nodeUiConfig" : {
+              "yPos" : 49.02284749830794,
+              "ports_info" : [
+                {
+                  "data" : {
+                    "schema" : {}
+                  },
+                  "port_properties_id" : 2,
+                  "port_id" : 1003,
+                  "port_location" : "Right"
+                },
+                {
+                  "data" : {
+                    "schema" : {}
+                  },
+                  "port_properties_id" : 3,
+                  "port_id" : 1004,
+                  "port_location" : "Left"
+                }
+              ],
+              "xPos" : 70.52284749830794
+            },
+            "configTypeName" : "vue template adls gen1 destination config Curation UI"
+          }
+        ],
+        "linkDataArray" : [
+          {
+            "endPortId" : 1004,
+            "data" : {
+              "schema" : {
+                "preview_data" : {}
+              },
+              "linkType" : "schemalink"
+            },
+            "originPortId" : 1002,
+            "toNodeId" : 100000002,
+            "fromNodeId" : 100000001,
+            "link_id" : 10001
+          }
+        ],
+        "linkFromKeyProperty" : "fromNodeId",
+        "pipelineId" : 3376,
+        "enable_cache" : true,
+        "pipeline_config" : {
+          "flow_details" : {
+            "post_conditions" : {
+              "rest_api_details" : [
+                {
+                  "status_code_id" : null,
+                  "ordinal_position" : 1,
+                  "rest_api_id" : null,
+                  "rest_api_name" : "",
+                  "payload" : "",
+                  "status_code_description" : ""
+                }
+              ],
+              "enabled" : false
+            },
+            "spark_config" : "",
+            "pipeline_retry" : false,
+            "retry_count" : 3,
+            "pipeline_flow_timeout" : 72,
+            "pre_conditions" : {
+              "pipeline_timeout" : 8,
+              "pipeline_details" : [
+                {
+                  "status_code_id" : null,
+                  "data_movement_id" : null,
+                  "data_movement_name" : "",
+                  "status_code_description" : ""
+                }
+              ],
+              "enabled" : false
+            },
+            "email_notification" : {
+              "on_failure" : [],
+              "on_success" : [],
+              "email_check" : false
+            }
+          },
+          "pipeline_error_msg" : "",
+          "description" : "",
+          "workflow_engine_name" : "default_engine",
+          "contact_info" : {
+            "owner" : "MT4011",
+            "email" : "undefined"
+          },
+          "pipeline_name" : "AVRO_mt4011_2",
+          "tags" : [],
+          "workspace_pipeline_type_id" : 1,
+          "compute_engine_name" : "dev_compute_engine",
+          "engine_type" : "Spark",
+          "workflow_engine_id" : 1,
+          "engine_sub_type" : "CDH-emailtesting",
+          "engine_type_id" : 2,
+          "workspace_pipeline_type_name" : "batch",
+          "compute_engine_id" : 419,
+          "engine_sub_type_id" : 16
+        },
+        "linkFromPortIdProperty" : "originPortId",
+        "class" : "go.GraphLinksModel"
+      },
+      "tags" : []
+    }
+  ]
+}
