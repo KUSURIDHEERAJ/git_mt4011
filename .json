@@ -1,0 +1,25 @@
+{
+  "data" : [
+    {
+      "credential_type" : "Username with password",
+      "credential_name" : "JDBC_postgres_mt4011",
+      "dataplace_name" : "test_mt4011_duplicate",
+      "is_active" : true,
+      "is_sensitive" : false,
+      "connection_type" : "postgres",
+      "description" : "",
+      "source_info" : {
+        "database_name" : "training",
+        "filter_list" : [
+          {
+            "filter_value" : "tr5",
+            "filter_type" : "Where IN clause"
+          }
+        ],
+        "filters_enabled" : true,
+        "host_name" : "w3.training5.modak.com:5432"
+      }
+    }
+  ],
+  "dataplace_tag_details" : []
+}
