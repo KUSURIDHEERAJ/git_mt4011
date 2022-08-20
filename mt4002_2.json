@@ -1,0 +1,652 @@
+{
+  "CurationPipeline" : [
+    {
+      "pipelineJson" : {
+        "pipeline_version" : "v0.902",
+        "linkToPortIdProperty" : "endPortId",
+        "is_pipeline_validated" : true,
+        "is_active" : true,
+        "nodeKeyProperty" : "nodeId",
+        "refresh_freq" : {
+          "consider_timezone" : true,
+          "cron_freq" : "",
+          "cron_timezone" : "",
+          "cron_type" : ""
+        },
+        "linkToKeyProperty" : "toNodeId",
+        "source_records" : null,
+        "preview_records" : null,
+        "linkDataArray" : [
+          {
+            "endPortId" : 166097900307813,
+            "data" : {
+              "schema" : {
+                "type" : "struct",
+                "fields" : [
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "a_custid",
+                    "type" : "string"
+                  },
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "a_firstname",
+                    "type" : "string"
+                  },
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "a_lastname",
+                    "type" : "string"
+                  },
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "a_state",
+                    "type" : "string"
+                  },
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "a_businessname",
+                    "type" : "string"
+                  },
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "a_passportnumber",
+                    "type" : "string"
+                  },
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "a_phonenumber",
+                    "type" : "string"
+                  },
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "a_email",
+                    "type" : "string"
+                  },
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "b_custid",
+                    "type" : "string"
+                  },
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "b_firstname",
+                    "type" : "string"
+                  },
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "b_lastname",
+                    "type" : "string"
+                  },
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "b_state",
+                    "type" : "string"
+                  },
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "b_businessname",
+                    "type" : "string"
+                  },
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "b_passportnumber",
+                    "type" : "string"
+                  },
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "b_phonenumber",
+                    "type" : "string"
+                  },
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "b_email",
+                    "type" : "string"
+                  }
+                ]
+              },
+              "preview_data" : {}
+            },
+            "originPortId" : 166097841762304,
+            "toNodeId" : 166097900307711,
+            "linkType" : "schemalink",
+            "fromNodeId" : 166097841762102,
+            "link_id" : 166097901522214
+          }
+        ],
+        "nodeDataArray" : [
+          {
+            "uiNodeOrder" : "2E",
+            "node_error_msg" : "",
+            "nodeVersion" : 1,
+            "nodeTypeId" : 11,
+            "nodeTypeUiConfig" : {
+              "acceptedPortProperties" : [
+                {
+                  "port_properties_id" : 2,
+                  "port_properties" : {
+                    "cursor" : "pointer",
+                    "porttype_name" : "blue",
+                    "fill" : "#3498db",
+                    "stroke" : "#3498db",
+                    "toLinkable" : false,
+                    "porttype_id" : 1,
+                    "fromLinkable" : true,
+                    "width" : 9,
+                    "alignment" : false,
+                    "alignment_properties" : {},
+                    "port_location" : "Right",
+                    "height" : 9,
+                    "acceptLinkTypes" : [
+                      {
+                        "node_linktype_id" : 1,
+                        "outputMinLinks" : 0,
+                        "inputMinLinks" : 0,
+                        "node_linktype_name" : "dottedlink",
+                        "inputMaxLinks" : 0,
+                        "outputMaxLinks" : 9999
+                      }
+                    ]
+                  }
+                },
+                {
+                  "port_properties_id" : 3,
+                  "port_properties" : {
+                    "cursor" : "pointer",
+                    "porttype_name" : "white",
+                    "fill" : "white",
+                    "stroke" : "gray",
+                    "toLinkable" : true,
+                    "porttype_id" : 2,
+                    "fromLinkable" : false,
+                    "width" : 15,
+                    "alignment" : false,
+                    "alignment_properties" : {},
+                    "port_location" : "Left",
+                    "height" : 15,
+                    "acceptLinkTypes" : [
+                      {
+                        "node_linktype_id" : 2,
+                        "outputMinLinks" : 0,
+                        "inputMinLinks" : 1,
+                        "node_linktype_name" : "schemalink",
+                        "inputMaxLinks" : 1,
+                        "outputMaxLinks" : 0
+                      }
+                    ]
+                  }
+                }
+              ],
+              "initialLabel" : "ADLS GEN1 Destination",
+              "initialXPos" : 100,
+              "group_label" : "",
+              "nodeGroupType" : "destination",
+              "icon" : "adlsgen1.svg",
+              "groupLabel" : "Destinations",
+              "node_properties_id" : 11,
+              "initialYPos" : 100,
+              "nodeGroupTypeId" : 3
+            },
+            "node_form_default_values" : {
+              "default_add_extension" : true,
+              "default_output_file_option_type" : "multiple",
+              "default_partition" : false,
+              "default_repartition" : true,
+              "default_include_header" : true,
+              "default_repartition_number" : 40,
+              "default_mode" : "overwrite"
+            },
+            "node_execution" : "rpc",
+            "node_metrics" : {
+              "records_count" : null,
+              "time_elapsed" : ""
+            },
+            "nodeTypeName" : "adls_gen1_destination",
+            "outputLinks" : [],
+            "is_node_validated" : true,
+            "configTypeId" : 208,
+            "inputLinks" : [
+              166097901522214
+            ],
+            "config" : {
+              "nodeName" : "ADLS GEN1 Destination 1",
+              "destination_file_url" : "adl://nabusparkgen1.azuredatalakestore.net/mt4002_testing/[%current_date%]/[%current_timestamp%]/[%current_day%]-[%current_month%]-[%current_year%]/[%current_time%]/[%current_hour%]-[%current_minute%]-[%current_second%]/[%pipeline_id%]/[%pipeline_name%]/[%pipeline_start_ts%]/[%pipeline_start_date%]/[%pipeline_start_year%]-[%pipeline_start_month%]-[%pipeline_start_day%]/[%pipeline_start_time%]/[%pipeline_start_hour%]-[%pipeline_start_minute%]-[%pipeline_start_second%]/[%pipeline_lastrun_ts%]/[%pipeline_run_id%]",
+              "partitionby" : false,
+              "credential_name" : "gen1_mt4002",
+              "connection_type" : "adls_gen1",
+              "description" : "",
+              "connection_type_id" : 19,
+              "credential_type_id" : 6,
+              "tags" : [],
+              "repartition_size" : 40,
+              "mode" : "overwrite",
+              "write_options" : [],
+              "credential_type" : "Azure Data Lake Storage Gen 1",
+              "output_file_option_type" : "single",
+              "file_type" : "csv",
+              "partitionby_column" : [],
+              "header" : true,
+              "add_extension" : true,
+              "repartition" : false,
+              "credential_id" : 2031
+            },
+            "nodeId" : 166097900307711,
+            "nodeLabel" : "",
+            "nodeUiConfig" : {
+              "yPos" : -10,
+              "ports_info" : [
+                {
+                  "data" : {
+                    "schema" : {},
+                    "file_modified_ts" : ""
+                  },
+                  "port_properties_id" : 2,
+                  "port_id" : 166097900307812,
+                  "port_location" : "Right"
+                },
+                {
+                  "data" : {
+                    "schema" : {},
+                    "file_modified_ts" : ""
+                  },
+                  "port_properties_id" : 3,
+                  "port_id" : 166097900307813,
+                  "port_location" : "Left"
+                }
+              ],
+              "xPos" : -160
+            },
+            "configTypeName" : "vue template adls gen1 destination config Curation UI"
+          },
+          {
+            "uiNodeOrder" : "1D",
+            "node_error_msg" : "",
+            "nodeVersion" : 1,
+            "nodeTypeId" : 4,
+            "nodeTypeUiConfig" : {
+              "acceptedPortProperties" : [
+                {
+                  "port_properties_id" : 1,
+                  "port_properties" : {
+                    "cursor" : "pointer",
+                    "porttype_name" : "blue",
+                    "fill" : "#3498db",
+                    "stroke" : "#3498db",
+                    "toLinkable" : true,
+                    "porttype_id" : 1,
+                    "fromLinkable" : false,
+                    "width" : 9,
+                    "alignment" : false,
+                    "alignment_properties" : {},
+                    "port_location" : "Left",
+                    "height" : 9,
+                    "acceptLinkTypes" : [
+                      {
+                        "node_linktype_id" : 1,
+                        "outputMinLinks" : 0,
+                        "inputMinLinks" : 0,
+                        "node_linktype_name" : "dottedlink",
+                        "inputMaxLinks" : 9999,
+                        "outputMaxLinks" : 0
+                      }
+                    ]
+                  }
+                },
+                {
+                  "port_properties_id" : 4,
+                  "port_properties" : {
+                    "cursor" : "pointer",
+                    "porttype_name" : "white",
+                    "fill" : "white",
+                    "stroke" : "gray",
+                    "toLinkable" : false,
+                    "porttype_id" : 2,
+                    "fromLinkable" : true,
+                    "width" : 15,
+                    "alignment" : false,
+                    "alignment_properties" : {},
+                    "port_location" : "Right",
+                    "height" : 15,
+                    "acceptLinkTypes" : [
+                      {
+                        "node_linktype_id" : 2,
+                        "outputMinLinks" : 1,
+                        "inputMinLinks" : 0,
+                        "node_linktype_name" : "schemalink",
+                        "inputMaxLinks" : 0,
+                        "outputMaxLinks" : 9999
+                      }
+                    ]
+                  }
+                }
+              ],
+              "initialLabel" : "S3 Source",
+              "initialXPos" : 100,
+              "group_label" : "S",
+              "nodeGroupType" : "source",
+              "icon" : "s3.svg",
+              "groupLabel" : "Sources",
+              "node_properties_id" : 4,
+              "initialYPos" : 100,
+              "nodeGroupTypeId" : 2
+            },
+            "node_form_default_values" : {
+              "default_infer_schema" : false,
+              "default_records_to_infer_schema" : 1,
+              "default_header" : true
+            },
+            "node_execution" : "",
+            "node_metrics" : {
+              "records_count" : null,
+              "time_elapsed" : ""
+            },
+            "nodeTypeName" : "s3_source",
+            "outputLinks" : [
+              166097901522214
+            ],
+            "is_node_validated" : true,
+            "configTypeId" : 210,
+            "inputLinks" : [],
+            "config" : {
+              "nodeName" : "S3 Source 1",
+              "credential_name" : "S3_mt4002",
+              "connection_type" : "s3",
+              "columns_info" : [],
+              "source_file_url" : "s3a://gratis-bucket-test/mt4002_testing/[%current_day%]-[%current_month%]-[%current_year%].csv",
+              "description" : "",
+              "infer_schema" : true,
+              "connection_type_id" : 10,
+              "credential_type_id" : 2,
+              "read_options" : [],
+              "tags" : [],
+              "credential_type" : "AWS",
+              "file_type" : "csv",
+              "header" : true,
+              "records_for_infer_schema" : 1,
+              "region" : "us-east-2",
+              "credential_id" : 2028
+            },
+            "nodeId" : 166097841762102,
+            "nodeLabel" : "S3",
+            "nodeUiConfig" : {
+              "yPos" : -10,
+              "ports_info" : [
+                {
+                  "data" : {
+                    "schema" : {},
+                    "file_modified_ts" : ""
+                  },
+                  "port_properties_id" : 1,
+                  "port_id" : 166097841762303,
+                  "port_location" : "Left"
+                },
+                {
+                  "data" : {
+                    "schema" : {
+                      "type" : "struct",
+                      "fields" : [
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "a_custid",
+                          "type" : "string"
+                        },
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "a_firstname",
+                          "type" : "string"
+                        },
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "a_lastname",
+                          "type" : "string"
+                        },
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "a_state",
+                          "type" : "string"
+                        },
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "a_businessname",
+                          "type" : "string"
+                        },
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "a_passportnumber",
+                          "type" : "string"
+                        },
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "a_phonenumber",
+                          "type" : "string"
+                        },
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "a_email",
+                          "type" : "string"
+                        },
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "b_custid",
+                          "type" : "string"
+                        },
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "b_firstname",
+                          "type" : "string"
+                        },
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "b_lastname",
+                          "type" : "string"
+                        },
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "b_state",
+                          "type" : "string"
+                        },
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "b_businessname",
+                          "type" : "string"
+                        },
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "b_passportnumber",
+                          "type" : "string"
+                        },
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "b_phonenumber",
+                          "type" : "string"
+                        },
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "b_email",
+                          "type" : "string"
+                        }
+                      ]
+                    },
+                    "file_modified_ts" : ""
+                  },
+                  "port_properties_id" : 4,
+                  "port_id" : 166097841762304,
+                  "port_location" : "Right"
+                }
+              ],
+              "xPos" : -420
+            },
+            "configTypeName" : "vue template s3 source config Curation UI"
+          }
+        ],
+        "last_validation_ts" : "2022-08-20 16:41:00.053027",
+        "linkFromKeyProperty" : "fromNodeId",
+        "pipelineId" : 4520,
+        "enable_cache" : true,
+        "pipeline_config" : {
+          "flow_details" : {
+            "post_conditions" : {
+              "rest_api_details" : [],
+              "enabled" : false
+            },
+            "spark_config" : {
+              "num_executors" : "2",
+              "executor_memory" : "20G",
+              "driver_memory" : "10G",
+              "solr_batch_size" : "10000",
+              "parallel_threads" : "10",
+              "fetch_size" : "50000",
+              "driver_cores" : "1",
+              "executor_cores" : "5",
+              "master" : "local[*]"
+            },
+            "enable_spark_config" : false,
+            "pipeline_retry" : false,
+            "retry_count" : 3,
+            "extra_spark_config" : [],
+            "pipeline_flow_timeout" : 72,
+            "pre_conditions" : {
+              "pipeline_timeout" : 8,
+              "pipeline_details" : [],
+              "enabled" : false
+            },
+            "email_notification" : {
+              "on_failure" : [],
+              "failure_email_check" : false,
+              "on_success" : [],
+              "same_as_success_email_check" : false,
+              "success_email_check" : false
+            }
+          },
+          "pipeline_alerts" : {
+            "duplicate_records" : {
+              "alert_config" : {
+                "default_threshold" : null,
+                "alert_validation_type" : null,
+                "alert_validation_type_id" : null
+              },
+              "alert_type_id" : "3",
+              "alert_label" : "Duplicate Records",
+              "enable_alert" : false,
+              "alert_type" : "duplicate_records"
+            },
+            "rate_of_data_change" : {
+              "alert_config" : {
+                "default_threshold" : 10,
+                "alert_validation_type" : "Passive",
+                "alert_validation_type_id" : "2"
+              },
+              "alert_type_id" : "4",
+              "alert_label" : "Rate of Data Change",
+              "enable_alert" : false,
+              "alert_type" : "rate_of_data_change"
+            },
+            "schema_drift" : {
+              "alert_config" : {
+                "default_threshold" : null,
+                "alert_validation_type" : null,
+                "alert_validation_type_id" : null
+              },
+              "alert_type_id" : "1",
+              "alert_label" : "Schema Drift",
+              "enable_alert" : false,
+              "alert_type" : "schema_drift"
+            },
+            "no_data_change" : {
+              "alert_config" : {
+                "default_threshold" : null,
+                "alert_validation_type" : null,
+                "alert_validation_type_id" : null
+              },
+              "alert_type_id" : "2",
+              "alert_label" : "No Data Change",
+              "enable_alert" : false,
+              "alert_type" : "no_data_change"
+            },
+            "row_count" : {
+              "alert_config" : {
+                "default_threshold" : 10,
+                "alert_validation_type" : "Passive",
+                "alert_validation_type_id" : "2"
+              },
+              "alert_type_id" : "5",
+              "alert_label" : "Row Count",
+              "enable_alert" : false,
+              "alert_type" : "row_count"
+            },
+            "execution_time" : {
+              "alert_config" : {
+                "default_threshold" : 10,
+                "alert_validation_type" : "Passive",
+                "alert_validation_type_id" : "2"
+              },
+              "alert_type_id" : "6",
+              "alert_label" : "Execution Time",
+              "enable_alert" : false,
+              "alert_type" : "execution_time"
+            }
+          },
+          "pipeline_error_msg" : "",
+          "description" : "",
+          "workflow_engine_name" : "RPC_workflow_engine",
+          "contact_info" : {
+            "owner" : "MT4002",
+            "email" : "manasa.kandimalla@modak.com"
+          },
+          "pipeline_form_default_values" : {
+            "default_pipeline_retry" : false,
+            "default_pipeline_flow_timeout" : 24,
+            "default_retry_count" : 0
+          },
+          "pipeline_name" : "SystemVariablesTest3",
+          "tags" : [],
+          "compute_engine_name" : "RPC_compute_engine",
+          "workspace_pipeline_type_id" : 1,
+          "engine_type" : "Spark",
+          "workflow_engine_id" : 28,
+          "engine_sub_type" : "Standalone-Almaren",
+          "engine_id" : 2,
+          "engine_type_id" : 2,
+          "workspace_pipeline_type_name" : "batch",
+          "compute_engine_id" : 489,
+          "engine_sub_type_id" : 34
+        },
+        "linkFromPortIdProperty" : "originPortId",
+        "class" : "go.GraphLinksModel"
+      },
+      "tags" : []
+    }
+  ]
+}
