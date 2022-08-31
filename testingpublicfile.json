@@ -1,0 +1,563 @@
+{
+  "CurationPipeline" : [
+    {
+      "pipelineJson" : {
+        "pipeline_version" : "v0.902",
+        "linkToPortIdProperty" : "endPortId",
+        "is_pipeline_validated" : true,
+        "is_active" : true,
+        "nodeKeyProperty" : "nodeId",
+        "refresh_freq" : {
+          "consider_timezone" : false,
+          "cron_freq" : "0 43 05 29 8 ? 2022",
+          "cron_timezone" : "Asia/Calcutta",
+          "cron_type" : "one_time"
+        },
+        "linkToKeyProperty" : "toNodeId",
+        "source_records" : null,
+        "preview_records" : null,
+        "linkDataArray" : [
+          {
+            "endPortId" : 166159935631207,
+            "data" : {
+              "schema" : {
+                "type" : "struct",
+                "fields" : [
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "prod_pat_id",
+                    "type" : "integer"
+                  },
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "product_id",
+                    "type" : "string"
+                  },
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "patent_no",
+                    "type" : "string"
+                  },
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "patent_expire_date",
+                    "type" : "timestamp"
+                  },
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "drug_substance_flag",
+                    "type" : "integer"
+                  },
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "drug_product_flag",
+                    "type" : "integer"
+                  },
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "patent_use_code",
+                    "type" : "string"
+                  },
+                  {
+                    "metadata" : {},
+                    "nullable" : true,
+                    "name" : "delist_flag",
+                    "type" : "integer"
+                  }
+                ]
+              },
+              "preview_data" : {}
+            },
+            "originPortId" : 166186901705004,
+            "toNodeId" : 166159935631205,
+            "linkType" : "schemalink",
+            "fromNodeId" : 166186901704902,
+            "link_id" : 166186902256505
+          }
+        ],
+        "nodeDataArray" : [
+          {
+            "uiNodeOrder" : "1D",
+            "node_error_msg" : "",
+            "nodeVersion" : 1,
+            "nodeTypeId" : 4,
+            "nodeTypeUiConfig" : {
+              "acceptedPortProperties" : [
+                {
+                  "port_properties_id" : 1,
+                  "port_properties" : {
+                    "cursor" : "pointer",
+                    "porttype_name" : "blue",
+                    "fill" : "#3498db",
+                    "stroke" : "#3498db",
+                    "toLinkable" : true,
+                    "porttype_id" : 1,
+                    "fromLinkable" : false,
+                    "width" : 9,
+                    "alignment" : false,
+                    "alignment_properties" : {},
+                    "port_location" : "Left",
+                    "height" : 9,
+                    "acceptLinkTypes" : [
+                      {
+                        "node_linktype_id" : 1,
+                        "outputMinLinks" : 0,
+                        "inputMinLinks" : 0,
+                        "node_linktype_name" : "dottedlink",
+                        "inputMaxLinks" : 9999,
+                        "outputMaxLinks" : 0
+                      }
+                    ]
+                  }
+                },
+                {
+                  "port_properties_id" : 4,
+                  "port_properties" : {
+                    "cursor" : "pointer",
+                    "porttype_name" : "white",
+                    "fill" : "white",
+                    "stroke" : "gray",
+                    "toLinkable" : false,
+                    "porttype_id" : 2,
+                    "fromLinkable" : true,
+                    "width" : 15,
+                    "alignment" : false,
+                    "alignment_properties" : {},
+                    "port_location" : "Right",
+                    "height" : 15,
+                    "acceptLinkTypes" : [
+                      {
+                        "node_linktype_id" : 2,
+                        "outputMinLinks" : 1,
+                        "inputMinLinks" : 0,
+                        "node_linktype_name" : "schemalink",
+                        "inputMaxLinks" : 0,
+                        "outputMaxLinks" : 9999
+                      }
+                    ]
+                  }
+                }
+              ],
+              "initialLabel" : "S3 Source",
+              "initialXPos" : 100,
+              "group_label" : "S",
+              "nodeGroupType" : "source",
+              "icon" : "s3.svg",
+              "groupLabel" : "Sources",
+              "node_properties_id" : 4,
+              "initialYPos" : 100,
+              "nodeGroupTypeId" : 2
+            },
+            "node_form_default_values" : {
+              "default_infer_schema" : true,
+              "default_records_to_infer_schema" : 1,
+              "default_header" : true
+            },
+            "node_execution" : "",
+            "node_metrics" : {
+              "records_count" : null,
+              "time_elapsed" : ""
+            },
+            "nodeTypeName" : "s3_source",
+            "outputLinks" : [
+              166186902256505
+            ],
+            "is_node_validated" : true,
+            "configTypeId" : 106,
+            "inputLinks" : [],
+            "config" : {
+              "nodeName" : "S3 Source 1",
+              "credential_name" : "AWS gratis mt4011",
+              "connection_type" : "s3",
+              "columns_info" : [],
+              "source_file_url" : "s3://gratis-bucket-test/dest_mt4011//[%current_year%]-[%current_month%]-[%current_date%]-[%current_day%]-[%pipeline_id%]-[%pipeline_name%]-[%pipeline_start_year%]-[%pipeline_start_month%]-[%pipeline_start_day%]-[%pipeline_start_hour%]-16618684431735074//",
+              "description" : "",
+              "infer_schema" : true,
+              "connection_type_id" : 10,
+              "credential_type_id" : 2,
+              "read_options" : [],
+              "tags" : [],
+              "credential_type" : "AWS",
+              "file_type" : "csv",
+              "header" : true,
+              "records_for_infer_schema" : 100,
+              "region" : "us-east-2",
+              "credential_id" : 175
+            },
+            "nodeId" : 166186901704902,
+            "nodeLabel" : "S3",
+            "nodeUiConfig" : {
+              "yPos" : 30,
+              "ports_info" : [
+                {
+                  "data" : {
+                    "schema" : {},
+                    "file_modified_ts" : ""
+                  },
+                  "port_properties_id" : 1,
+                  "port_id" : 166186901705003,
+                  "port_location" : "Left"
+                },
+                {
+                  "data" : {
+                    "schema" : {
+                      "type" : "struct",
+                      "fields" : [
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "prod_pat_id",
+                          "type" : "integer"
+                        },
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "product_id",
+                          "type" : "string"
+                        },
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "patent_no",
+                          "type" : "string"
+                        },
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "patent_expire_date",
+                          "type" : "timestamp"
+                        },
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "drug_substance_flag",
+                          "type" : "integer"
+                        },
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "drug_product_flag",
+                          "type" : "integer"
+                        },
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "patent_use_code",
+                          "type" : "string"
+                        },
+                        {
+                          "metadata" : {},
+                          "nullable" : true,
+                          "name" : "delist_flag",
+                          "type" : "integer"
+                        }
+                      ]
+                    },
+                    "file_modified_ts" : ""
+                  },
+                  "port_properties_id" : 4,
+                  "port_id" : 166186901705004,
+                  "port_location" : "Right"
+                }
+              ],
+              "xPos" : -430
+            },
+            "configTypeName" : "vue template s3 source config Curation UI"
+          },
+          {
+            "uiNodeOrder" : "2D",
+            "node_error_msg" : "",
+            "nodeVersion" : 1,
+            "nodeTypeId" : 10,
+            "nodeTypeUiConfig" : {
+              "acceptedPortProperties" : [
+                {
+                  "port_properties_id" : 2,
+                  "port_properties" : {
+                    "cursor" : "pointer",
+                    "porttype_name" : "blue",
+                    "fill" : "#3498db",
+                    "stroke" : "#3498db",
+                    "toLinkable" : false,
+                    "porttype_id" : 1,
+                    "fromLinkable" : true,
+                    "width" : 9,
+                    "alignment" : false,
+                    "alignment_properties" : {},
+                    "port_location" : "Right",
+                    "height" : 9,
+                    "acceptLinkTypes" : [
+                      {
+                        "node_linktype_id" : 1,
+                        "outputMinLinks" : 0,
+                        "inputMinLinks" : 0,
+                        "node_linktype_name" : "dottedlink",
+                        "inputMaxLinks" : 0,
+                        "outputMaxLinks" : 9999
+                      }
+                    ]
+                  }
+                },
+                {
+                  "port_properties_id" : 3,
+                  "port_properties" : {
+                    "cursor" : "pointer",
+                    "porttype_name" : "white",
+                    "fill" : "white",
+                    "stroke" : "gray",
+                    "toLinkable" : true,
+                    "porttype_id" : 2,
+                    "fromLinkable" : false,
+                    "width" : 15,
+                    "alignment" : false,
+                    "alignment_properties" : {},
+                    "port_location" : "Left",
+                    "height" : 15,
+                    "acceptLinkTypes" : [
+                      {
+                        "node_linktype_id" : 2,
+                        "outputMinLinks" : 0,
+                        "inputMinLinks" : 1,
+                        "node_linktype_name" : "schemalink",
+                        "inputMaxLinks" : 1,
+                        "outputMaxLinks" : 0
+                      }
+                    ]
+                  }
+                }
+              ],
+              "initialLabel" : "S3 Destination",
+              "initialXPos" : 100,
+              "group_label" : "T",
+              "nodeGroupType" : "destination",
+              "icon" : "s3.svg",
+              "groupLabel" : "Destinations",
+              "node_properties_id" : 10,
+              "initialYPos" : 100,
+              "nodeGroupTypeId" : 3
+            },
+            "node_form_default_values" : {
+              "default_add_extension" : true,
+              "default_output_file_option_type" : "multiple",
+              "default_partition" : false,
+              "default_repartition" : true,
+              "default_include_header" : true,
+              "default_repartition_number" : 40,
+              "default_mode" : "overwrite"
+            },
+            "node_execution" : "",
+            "node_metrics" : {
+              "records_count" : null,
+              "time_elapsed" : ""
+            },
+            "nodeTypeName" : "s3_destination",
+            "outputLinks" : [],
+            "is_node_validated" : true,
+            "configTypeId" : 206,
+            "inputLinks" : [
+              166186902256505
+            ],
+            "config" : {
+              "nodeName" : "S3 Destination 2",
+              "destination_file_url" : "s3://gratis-bucket-test/dest_mt4011/[%current_year%]-[%current_month%]-[%current_date%]-[%current_day%]-[%pipeline_id%]-[%pipeline_name%]-[%pipeline_start_year%]-[%pipeline_start_month%]-[%pipeline_start_day%]-[%pipeline_start_hour%]-[%pipeline_run_id%]",
+              "partitionby" : false,
+              "credential_name" : "AWS gratis mt4011",
+              "connection_type" : "s3",
+              "description" : "",
+              "connection_type_id" : 10,
+              "credential_type_id" : 2,
+              "tags" : [],
+              "repartition_size" : 40,
+              "mode" : "overwrite",
+              "write_options" : [],
+              "credential_type" : "AWS",
+              "output_file_option_type" : "multiple",
+              "file_type" : "csv",
+              "partitionby_column" : [],
+              "header" : true,
+              "region" : "us-east-2",
+              "add_extension" : false,
+              "repartition" : true,
+              "credential_id" : 175
+            },
+            "nodeId" : 166159935631205,
+            "nodeLabel" : "S3",
+            "nodeUiConfig" : {
+              "yPos" : 50,
+              "ports_info" : [
+                {
+                  "data" : {
+                    "schema" : {},
+                    "file_modified_ts" : ""
+                  },
+                  "port_properties_id" : 2,
+                  "port_id" : 166159935631206,
+                  "port_location" : "Right"
+                },
+                {
+                  "data" : {
+                    "schema" : {},
+                    "file_modified_ts" : ""
+                  },
+                  "port_properties_id" : 3,
+                  "port_id" : 166159935631207,
+                  "port_location" : "Left"
+                }
+              ],
+              "xPos" : -80
+            },
+            "configTypeName" : "vue template s3 destination config Curation UI"
+          }
+        ],
+        "last_validation_ts" : "2022-08-30 14:21:40.685",
+        "linkFromKeyProperty" : "fromNodeId",
+        "pipelineId" : 255,
+        "enable_cache" : false,
+        "pipeline_config" : {
+          "flow_details" : {
+            "post_conditions" : {
+              "rest_api_details" : [],
+              "enabled" : false
+            },
+            "spark_config" : {
+              "solr_batch_size" : "10000",
+              "parallel_threads" : "10000",
+              "fetch_size" : "10000"
+            },
+            "enable_spark_config" : false,
+            "pipeline_retry" : false,
+            "retry_count" : 3,
+            "extra_spark_config" : [
+              {
+                "property" : "cores",
+                "value" : "2"
+              },
+              {
+                "property" : "conf",
+                "value" : "true"
+              }
+            ],
+            "pipeline_flow_timeout" : 72,
+            "pre_conditions" : {
+              "pipeline_timeout" : 8,
+              "pipeline_details" : [],
+              "enabled" : false
+            },
+            "email_notification" : {
+              "on_failure" : [
+                "dheeraj.kusuri@modak.com"
+              ],
+              "failure_email_check" : true,
+              "on_success" : [
+                "dheeraj.kusuri@modak.com"
+              ],
+              "same_as_success_email_check" : false,
+              "success_email_check" : true
+            }
+          },
+          "pipeline_alerts" : {
+            "duplicate_records" : {
+              "alert_config" : {
+                "default_threshold" : null,
+                "alert_validation_type" : null,
+                "alert_validation_type_id" : null
+              },
+              "alert_type_id" : "3",
+              "alert_label" : "Duplicate Records",
+              "enable_alert" : false,
+              "alert_type" : "duplicate_records"
+            },
+            "rate_of_data_change" : {
+              "alert_config" : {
+                "default_threshold" : 10,
+                "alert_validation_type" : "Passive",
+                "alert_validation_type_id" : "2"
+              },
+              "alert_type_id" : "4",
+              "alert_label" : "Rate of Data Change",
+              "enable_alert" : false,
+              "alert_type" : "rate_of_data_change"
+            },
+            "schema_drift" : {
+              "alert_config" : {
+                "default_threshold" : null,
+                "alert_validation_type" : null,
+                "alert_validation_type_id" : null
+              },
+              "alert_type_id" : "1",
+              "alert_label" : "Schema Drift",
+              "enable_alert" : false,
+              "alert_type" : "schema_drift"
+            },
+            "no_data_change" : {
+              "alert_config" : {
+                "default_threshold" : null,
+                "alert_validation_type" : null,
+                "alert_validation_type_id" : null
+              },
+              "alert_type_id" : "2",
+              "alert_label" : "No Data Change",
+              "enable_alert" : false,
+              "alert_type" : "no_data_change"
+            },
+            "row_count" : {
+              "alert_config" : {
+                "default_threshold" : 10,
+                "alert_validation_type" : "Passive",
+                "alert_validation_type_id" : "2"
+              },
+              "alert_type_id" : "5",
+              "alert_label" : "Row Count",
+              "enable_alert" : false,
+              "alert_type" : "row_count"
+            },
+            "execution_time" : {
+              "alert_config" : {
+                "default_threshold" : 10,
+                "alert_validation_type" : "Passive",
+                "alert_validation_type_id" : "2"
+              },
+              "alert_type_id" : "6",
+              "alert_label" : "Execution Time",
+              "enable_alert" : false,
+              "alert_type" : "execution_time"
+            }
+          },
+          "pipeline_error_msg" : "",
+          "description" : "",
+          "workflow_engine_name" : "curation_workflow_engine",
+          "contact_info" : {
+            "owner" : "MT4011",
+            "email" : "dheeraj.kusuri@modak.com"
+          },
+          "pipeline_form_default_values" : {
+            "default_pipeline_retry" : false,
+            "default_pipeline_flow_timeout" : 24,
+            "default_retry_count" : 0
+          },
+          "pipeline_name" : "jdbc to s3 pre duplicate",
+          "tags" : [],
+          "compute_engine_name" : "CDE_3_2_test_ce",
+          "workspace_pipeline_type_id" : 1,
+          "engine_type" : "Spark",
+          "workflow_engine_id" : 1,
+          "engine_sub_type" : "CDE-Almaren",
+          "engine_id" : 2,
+          "engine_type_id" : 2,
+          "workspace_pipeline_type_name" : "batch",
+          "compute_engine_id" : 12,
+          "engine_sub_type_id" : 13
+        },
+        "linkFromPortIdProperty" : "originPortId",
+        "class" : "go.GraphLinksModel"
+      }
+    }
+  ]
+}
