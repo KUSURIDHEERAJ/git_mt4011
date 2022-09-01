@@ -1,0 +1,59 @@
+{
+  "dataplace_details" : [
+    {
+      "dataplace_name" : "cg_source_db",
+      "schema_name" : "ctgov",
+      "filter_all_tables_views" : [
+        "T",
+        "V",
+        "M"
+      ],
+      "filters_list" : [
+        {
+          "filter_name" : "static",
+          "filter_value" : [
+            "meddra_with_study_name_type",
+            "meddra_filter",
+            "meddra_with_study_name",
+            "meddra_syn_data",
+            "meddra"
+          ],
+          "filter_type" : "Static",
+          "priority_order" : 2
+        }
+      ],
+      "table_count" : 5
+    }
+  ],
+  "datastore_details" : [
+    {
+      "datastore_name" : "Meddra",
+      "description" : "",
+      "connection_type" : "postgres",
+      "permission" : [
+        "Reviewer"
+      ],
+      "indexing_configuration" : {
+        "compute_engine_name" : "RPC_compute_engine",
+        "workflow_engine_name" : "indexing_workflow_engine",
+        "priority" : "Default"
+      },
+      "filter_resolving_configuration" : {
+        "workflow_engine_name" : "profiling_workflow_engine",
+        "priority" : "Default"
+      },
+      "profiling_configuration" : {
+        "compute_engine_name" : "RPC_compute_engine",
+        "workflow_engine_name" : "profiling_workflow_engine",
+        "exclude_sample_values" : false,
+        "priority" : "Default"
+      }
+    }
+  ],
+  "tags" : [
+    {
+      "tag_category_name" : "Test",
+      "tag_value" : "MM1204"
+    }
+  ]
+}
