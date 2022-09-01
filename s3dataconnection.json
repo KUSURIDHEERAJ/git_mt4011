@@ -1,0 +1,28 @@
+{
+  "data" : [
+    {
+      "credential_type" : "AWS",
+      "credential_name" : "AWS gratis mt4011",
+      "dataplace_name" : "s3 gratis relative path mt4011",
+      "is_active" : true,
+      "is_sensitive" : false,
+      "connection_type" : "s3",
+      "description" : "",
+      "source_info" : {
+        "bucket" : "gratis-bucket-test",
+        "path" : "test_mt4011/",
+        "ingestion_root_path" : "gratis-bucket-test/dest_mt4011/",
+        "fetch_stats_type" : "directory",
+        "fetch_column_metadata" : {
+          "tsv" : false,
+          "csv" : false,
+          "num_of_rows_for_delimiter_files_scan" : 0,
+          "parquet" : false,
+          "avro" : false
+        },
+        "region" : "us-east-2"
+      }
+    }
+  ],
+  "dataplace_tag_details" : []
+}
