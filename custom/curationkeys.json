@@ -1,0 +1,85 @@
+{
+  "data_movement_tag_details" : [],
+  "data" : [
+    {
+      "data_movement_name" : "curation_keys test",
+      "description" : "",
+      "destination_dataplace_name" : "Almaren Curation",
+      "destination_schema_name" : "Pipeline",
+      "ingestion_connection_type" : null,
+      "ingestion_table_format" : null,
+      "workflow_engine_name" : "profiling_workflow_engine",
+      "compute_engine_name" : "CDH_test_CE",
+      "compute_engine_details" : {
+        "compute_engine_name" : "CDH_test_CE",
+        "engine_type" : "Spark",
+        "engine_sub_type" : "CDH-Almaren/CDP-Almaren"
+      },
+      "source_type" : "almaren",
+      "destination_type" : "almaren",
+      "bot_priority" : "Default",
+      "advance_table_options" : null,
+      "flow_details" : {
+        "pipeline_retry" : false,
+        "ignore_data_types" : [],
+        "schema_drift" : {
+          "email_ids" : [],
+          "config" : {
+            "suffix" : "",
+            "timestamp" : ""
+          },
+          "enabled" : false
+        },
+        "skip_verification" : true,
+        "ignore_null_tables" : false,
+        "pre_conditions" : {
+          "pipeline_timeout" : 8,
+          "enabled" : false
+        },
+        "parallel_source_connections" : 3,
+        "spark_config" : {
+          "spark_kerberos_command_options" : "LS1jb25mIHNwYXJrLnlhcm4ua2V5dGFiPSROQUJVX1NQQVJLX0NVUkFUSU9OX0tFWVRBQl9QQVRIIFwNCi0tY29uZiBzcGFyay55YXJuLnByaW5jaXBhbD0kTkFCVV9TUEFSS19DVVJBVElPTl9QUklOQ0lQQUwgXA",
+          "spark_bots_token_command_options" : "LS1jb25mIHNwYXJrLm5hYnUudG9rZW49PCVib3RzX3Rva2VuJT4",
+          "spark_default_command_options" : "LS1tYXN0ZXIgeWFybiBcDS0tbmFtZSAiPCVwaXBlbGluZV9uYW1lJT4iIFwNLS1wYWNrYWdlcyAiY29tLmdpdGh1Yi5tdXNpYy1vZi10aGUtYWludXI6YWxtYXJlbi1mcmFtZXdvcmtfMi4xMTowLjkuMy0yLjQsY29tLmdpdGh1Yi5tdXNpYy1vZi10aGUtYWludXI6aHR0cC1hbG1hcmVuXzIuMTE6MS4yLjQtMi40IiBcDS0tamFycyAiJE5BQlVfU1BBUktfQk9UX0hPTUUvamFycy9uYWJ1LXNwYXJrYm90LWxpYi1jb21tb24tYXNzZW1ibHktMi4xMS0yLjQuamFyIiBcDS0tY29uZiBzcGFyay5keW5hbWljQWxsb2NhdGlvbi5lbmFibGVkPWZhbHNlIFwNLS1jb25mIHNwYXJrLnNxbC5zaHVmZmxlLnBhcnRpdGlvbnM9MTAgXA0tLWNvbmYgc3BhcmsuZHJpdmVyLmFyZ3M9IiIgIFwNLS1jb25mIHNwYXJrLnVpLmVuYWJsZWQ9ZmFsc2UgXA0tLWRyaXZlci1tZW1vcnkgMkcgXA0tLWV4ZWN1dG9yLWNvcmVzIDIgXA0tLW51bS1leGVjdXRvcnMgNSBcDS0tZXhlY3V0b3ItbWVtb3J5IDVHIFw="
+        },
+        "destination_file_format" : "",
+        "verification_threshold" : "",
+        "retry_count" : 3,
+        "pipeline_flow_timeout" : 72,
+        "pipeline_details" : null,
+        "git_info" : {
+          "git_branch_or_tag" : "master",
+          "git_file_path" : "code/curation.scala",
+          "git_url" : "git@github.com:nikhithareddy-modak/nabu-poc-curation.git",
+          "project_name" : "nabu-poc-curation"
+        },
+        "unsupported_data_types" : [
+          {
+            "asis" : [],
+            "null" : [],
+            "ignore" : [],
+            "customtext" : []
+          }
+        ]
+      },
+      "next_schedule_date" : null
+    }
+  ],
+  "data_movement_details" : [
+    {
+      "dataplace_name" : "Almaren Curation",
+      "schema_name" : "Pipeline",
+      "total_count" : 1,
+      "root_location_path" : null,
+      "ingest_all_tables_views" : [],
+      "filters_list" : [
+        {
+          "filter_name" : "none",
+          "filter_value" : [],
+          "filter_type" : "None",
+          "priority_order" : 1
+        }
+      ]
+    }
+  ]
+}
