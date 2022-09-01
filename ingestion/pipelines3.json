@@ -1,0 +1,75 @@
+{
+  "data_movement_tag_details" : [],
+  "data" : [
+    {
+      "data_movement_name" : "ingestion mt4011",
+      "description" : "",
+      "destination_dataplace_name" : "s3 gratis mt4011",
+      "destination_schema_name" : "gratis-bucket-test",
+      "ingestion_connection_type" : "s3",
+      "ingestion_table_format" : null,
+      "workflow_engine_name" : "ingestion_workflow_engine",
+      "compute_engine_name" : "S3Stream",
+      "compute_engine_details" : {
+        "compute_engine_name" : "S3Stream",
+        "engine_type" : "Stream",
+        "engine_sub_type" : "S3Stream"
+      },
+      "source_type" : "s3",
+      "destination_type" : "s3",
+      "bot_priority" : "Default",
+      "advance_table_options" : null,
+      "flow_details" : {
+        "pipeline_retry" : false,
+        "ignore_data_types" : [],
+        "schema_drift" : {
+          "email_ids" : [],
+          "config" : {
+            "suffix" : "",
+            "timestamp" : ""
+          },
+          "enabled" : false
+        },
+        "skip_verification" : true,
+        "ignore_null_tables" : false,
+        "pre_conditions" : {
+          "pipeline_timeout" : 8,
+          "enabled" : false
+        },
+        "run_only_file_changes" : false,
+        "parallel_source_connections" : 10,
+        "destination_file_format" : "",
+        "verification_threshold" : "",
+        "retry_count" : 3,
+        "pipeline_flow_timeout" : 72,
+        "pipeline_details" : null,
+        "unsupported_data_types" : [
+          {
+            "asis" : [],
+            "null" : [],
+            "ignore" : [],
+            "customtext" : []
+          }
+        ]
+      },
+      "next_schedule_date" : null
+    }
+  ],
+  "data_movement_details" : [
+    {
+      "dataplace_name" : "s3 gratis mt4011",
+      "schema_name" : "gratis-bucket-test",
+      "total_count" : 9,
+      "root_location_path" : "test_mt4011",
+      "ingest_all_tables_views" : [],
+      "filters_list" : [
+        {
+          "filter_name" : "none",
+          "filter_value" : [],
+          "filter_type" : "None",
+          "priority_order" : 1
+        }
+      ]
+    }
+  ]
+}
