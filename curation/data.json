@@ -1,0 +1,486 @@
+{
+  "CurationPipeline" : [
+    {
+      "pipelineJson" : {
+        "pipeline_version" : "v0.902",
+        "linkToPortIdProperty" : "endPortId",
+        "is_pipeline_validated" : false,
+        "is_active" : true,
+        "nodeKeyProperty" : "nodeId",
+        "refresh_freq" : {
+          "consider_timezone" : true,
+          "cron_freq" : "",
+          "cron_timezone" : "",
+          "cron_type" : ""
+        },
+        "linkToKeyProperty" : "toNodeId",
+        "source_records" : null,
+        "preview_records" : null,
+        "linkDataArray" : [
+          {
+            "endPortId" : 166167994549107,
+            "data" : {
+              "schema" : {},
+              "preview_data" : {}
+            },
+            "originPortId" : 166167994139304,
+            "toNodeId" : 166167994549105,
+            "linkType" : "schemalink",
+            "fromNodeId" : 166167994139302,
+            "link_id" : 166167994695108
+          }
+        ],
+        "nodeDataArray" : [
+          {
+            "uiNodeOrder" : "1B",
+            "node_error_msg" : "",
+            "nodeVersion" : 1,
+            "nodeTypeId" : 2,
+            "nodeTypeUiConfig" : {
+              "acceptedPortProperties" : [
+                {
+                  "port_properties_id" : 1,
+                  "port_properties" : {
+                    "cursor" : "pointer",
+                    "porttype_name" : "blue",
+                    "fill" : "#3498db",
+                    "stroke" : "#3498db",
+                    "toLinkable" : true,
+                    "porttype_id" : 1,
+                    "fromLinkable" : false,
+                    "width" : 9,
+                    "alignment" : false,
+                    "alignment_properties" : {},
+                    "port_location" : "Left",
+                    "height" : 9,
+                    "acceptLinkTypes" : [
+                      {
+                        "node_linktype_id" : 1,
+                        "outputMinLinks" : 0,
+                        "inputMinLinks" : 0,
+                        "node_linktype_name" : "dottedlink",
+                        "inputMaxLinks" : 9999,
+                        "outputMaxLinks" : 0
+                      }
+                    ]
+                  }
+                },
+                {
+                  "port_properties_id" : 4,
+                  "port_properties" : {
+                    "cursor" : "pointer",
+                    "porttype_name" : "white",
+                    "fill" : "white",
+                    "stroke" : "gray",
+                    "toLinkable" : false,
+                    "porttype_id" : 2,
+                    "fromLinkable" : true,
+                    "width" : 15,
+                    "alignment" : false,
+                    "alignment_properties" : {},
+                    "port_location" : "Right",
+                    "height" : 15,
+                    "acceptLinkTypes" : [
+                      {
+                        "node_linktype_id" : 2,
+                        "outputMinLinks" : 1,
+                        "inputMinLinks" : 0,
+                        "node_linktype_name" : "schemalink",
+                        "inputMaxLinks" : 0,
+                        "outputMaxLinks" : 9999
+                      }
+                    ]
+                  }
+                }
+              ],
+              "initialLabel" : "Data Connection Dataset Source",
+              "initialXPos" : 100,
+              "group_label" : "S",
+              "nodeGroupType" : "source",
+              "icon" : "dataconnection.svg",
+              "groupLabel" : "Sources",
+              "node_properties_id" : 2,
+              "initialYPos" : 100,
+              "nodeGroupTypeId" : 2
+            },
+            "node_form_default_values" : {
+              "default_infer_schema" : false,
+              "default_enable_hash_partition" : false,
+              "default_fetch_size" : 5000,
+              "default_query_timeout" : 0,
+              "default_records_to_infer_schema" : 1,
+              "default_header" : true,
+              "default_number_of_hash_partitions" : 8
+            },
+            "node_execution" : "rpc",
+            "node_metrics" : {
+              "records_count" : null,
+              "time_elapsed" : ""
+            },
+            "nodeTypeName" : "data_connection_source",
+            "outputLinks" : [
+              166167994695108
+            ],
+            "is_node_validated" : false,
+            "configTypeId" : 190,
+            "inputLinks" : [],
+            "config" : {
+              "nodeName" : "Data Connection Dataset Source 1",
+              "queryTimeout" : 0,
+              "columns_info" : [],
+              "data_connection_type_id" : null,
+              "description" : "",
+              "infer_schema" : true,
+              "object_component_id" : 746,
+              "data_connection_id" : 3006,
+              "data_connection_name" : "s3 gratis mt4011",
+              "credential_type_id" : 2,
+              "object_component_name" : "gratis-bucket-test",
+              "read_options" : [],
+              "jdbc_read_options" : [],
+              "object_name" : "product_patents.csv",
+              "data_connection_type" : "s3",
+              "records_for_infer_schema" : 1,
+              "is_local" : null,
+              "number_of_hash_partitions" : 8,
+              "credential_name" : "Amazon_Web_Services_mt4011",
+              "object_type" : "csv",
+              "source_file_url" : "s3a://gratis-bucket-test/test_mt4011/product_patents.csv",
+              "enable_hash_partition" : false,
+              "jdbc_url" : "",
+              "object_id" : 21507110,
+              "tags" : [],
+              "credential_type" : "AWS",
+              "driver" : "",
+              "fetchsize" : 5000,
+              "header" : true,
+              "region" : "us-east-2",
+              "credential_id" : 2025
+            },
+            "nodeId" : 166167994139302,
+            "nodeLabel" : "Data Connection Dataset",
+            "nodeUiConfig" : {
+              "yPos" : 30,
+              "ports_info" : [
+                {
+                  "data" : {
+                    "schema" : {},
+                    "file_modified_ts" : ""
+                  },
+                  "port_properties_id" : 1,
+                  "port_id" : 166167994139303,
+                  "port_location" : "Left"
+                },
+                {
+                  "data" : {
+                    "schema" : {},
+                    "file_modified_ts" : ""
+                  },
+                  "port_properties_id" : 4,
+                  "port_id" : 166167994139304,
+                  "port_location" : "Right"
+                }
+              ],
+              "xPos" : -340
+            },
+            "configTypeName" : "vue template datasource source config Curation UI"
+          },
+          {
+            "uiNodeOrder" : "2B",
+            "node_error_msg" : "",
+            "nodeVersion" : 1,
+            "nodeTypeId" : 8,
+            "nodeTypeUiConfig" : {
+              "acceptedPortProperties" : [
+                {
+                  "port_properties_id" : 2,
+                  "port_properties" : {
+                    "cursor" : "pointer",
+                    "porttype_name" : "blue",
+                    "fill" : "#3498db",
+                    "stroke" : "#3498db",
+                    "toLinkable" : false,
+                    "porttype_id" : 1,
+                    "fromLinkable" : true,
+                    "width" : 9,
+                    "alignment" : false,
+                    "alignment_properties" : {},
+                    "port_location" : "Right",
+                    "height" : 9,
+                    "acceptLinkTypes" : [
+                      {
+                        "node_linktype_id" : 1,
+                        "outputMinLinks" : 0,
+                        "inputMinLinks" : 0,
+                        "node_linktype_name" : "dottedlink",
+                        "inputMaxLinks" : 0,
+                        "outputMaxLinks" : 9999
+                      }
+                    ]
+                  }
+                },
+                {
+                  "port_properties_id" : 3,
+                  "port_properties" : {
+                    "cursor" : "pointer",
+                    "porttype_name" : "white",
+                    "fill" : "white",
+                    "stroke" : "gray",
+                    "toLinkable" : true,
+                    "porttype_id" : 2,
+                    "fromLinkable" : false,
+                    "width" : 15,
+                    "alignment" : false,
+                    "alignment_properties" : {},
+                    "port_location" : "Left",
+                    "height" : 15,
+                    "acceptLinkTypes" : [
+                      {
+                        "node_linktype_id" : 2,
+                        "outputMinLinks" : 0,
+                        "inputMinLinks" : 1,
+                        "node_linktype_name" : "schemalink",
+                        "inputMaxLinks" : 1,
+                        "outputMaxLinks" : 0
+                      }
+                    ]
+                  }
+                }
+              ],
+              "initialLabel" : "Data Connection Dataset Destination",
+              "initialXPos" : 100,
+              "group_label" : "T",
+              "nodeGroupType" : "destination",
+              "icon" : "dataconnection.svg",
+              "groupLabel" : "Destinations",
+              "node_properties_id" : 8,
+              "initialYPos" : 100,
+              "nodeGroupTypeId" : 3
+            },
+            "node_form_default_values" : {
+              "default_batchsize" : 1000,
+              "default_add_extension" : true,
+              "default_output_file_option_type" : "multiple",
+              "default_partition" : false,
+              "default_repartition" : true,
+              "default_include_header" : true,
+              "default_repartition_number" : 40,
+              "default_query_timeout" : 0,
+              "default_mode" : "overwrite",
+              "default_truncate" : false
+            },
+            "node_execution" : "",
+            "node_metrics" : {
+              "records_count" : null,
+              "time_elapsed" : ""
+            },
+            "nodeTypeName" : "data_connection_destination",
+            "outputLinks" : [],
+            "is_node_validated" : false,
+            "configTypeId" : 195,
+            "inputLinks" : [
+              166167994695108
+            ],
+            "config" : {
+              "nodeName" : "Data Connection Dataset Destination 1",
+              "partitionby" : false,
+              "queryTimeout" : 30000,
+              "data_connection_type_id" : 10,
+              "description" : "",
+              "object_component_id" : 746,
+              "data_connection_id" : 3006,
+              "data_connection_name" : "s3 gratis mt4011",
+              "credential_type_id" : 2,
+              "object_component_name" : "gratis-bucket-test",
+              "batchsize" : 1000,
+              "repartition_size" : 40,
+              "mode" : "overwrite",
+              "write_options" : [],
+              "output_file_option_type" : "spark_default",
+              "truncate" : false,
+              "jdbc_write_options" : [],
+              "object_name" : "product_patents_mt4011.csv",
+              "partitionby_column" : [],
+              "data_connection_type" : "s3",
+              "is_local" : null,
+              "repartition" : false,
+              "destination_file_url" : "s3a://gratis-bucket-test/test_mt4011/product_patents_mt4011.csv",
+              "credential_name" : "Amazon_Web_Services_mt4011",
+              "object_type" : "csv",
+              "jdbc_url" : "",
+              "object_id" : 21507113,
+              "tags" : [],
+              "credential_type" : "AWS",
+              "driver" : "",
+              "target_relative_path" : "",
+              "header" : true,
+              "region" : "us-east-2",
+              "add_extension" : true,
+              "credential_id" : 2025
+            },
+            "nodeId" : 166167994549105,
+            "nodeLabel" : "Data Connection Dataset",
+            "nodeUiConfig" : {
+              "yPos" : 30,
+              "ports_info" : [
+                {
+                  "data" : {
+                    "schema" : {},
+                    "file_modified_ts" : ""
+                  },
+                  "port_properties_id" : 2,
+                  "port_id" : 166167994549106,
+                  "port_location" : "Right"
+                },
+                {
+                  "data" : {
+                    "schema" : {},
+                    "file_modified_ts" : ""
+                  },
+                  "port_properties_id" : 3,
+                  "port_id" : 166167994549107,
+                  "port_location" : "Left"
+                }
+              ],
+              "xPos" : 140
+            },
+            "configTypeName" : "vue template datasource destination config Curation UI"
+          }
+        ],
+        "last_validation_ts" : null,
+        "linkFromKeyProperty" : "fromNodeId",
+        "pipelineId" : 5074,
+        "enable_cache" : false,
+        "pipeline_config" : {
+          "flow_details" : {
+            "post_conditions" : {
+              "rest_api_details" : [],
+              "enabled" : false
+            },
+            "spark_config" : {
+              "num_executors" : "1",
+              "executor_memory" : "8G",
+              "driver_memory" : "2G",
+              "solr_batch_size" : "10000",
+              "parallel_threads" : "10",
+              "fetch_size" : "10000",
+              "driver_cores" : "1",
+              "executor_cores" : "4"
+            },
+            "enable_spark_config" : false,
+            "pipeline_retry" : false,
+            "retry_count" : 3,
+            "extra_spark_config" : [],
+            "pipeline_flow_timeout" : 72,
+            "pre_conditions" : {
+              "pipeline_timeout" : 8,
+              "pipeline_details" : [],
+              "enabled" : false
+            },
+            "email_notification" : {
+              "on_failure" : [],
+              "failure_email_check" : false,
+              "on_success" : [],
+              "same_as_success_email_check" : false,
+              "success_email_check" : false
+            }
+          },
+          "pipeline_alerts" : {
+            "duplicate_records" : {
+              "alert_config" : {
+                "default_threshold" : null,
+                "alert_validation_type" : null,
+                "alert_validation_type_id" : null
+              },
+              "alert_type_id" : "3",
+              "alert_label" : "Duplicate Records",
+              "enable_alert" : false,
+              "alert_type" : "duplicate_records"
+            },
+            "rate_of_data_change" : {
+              "alert_config" : {
+                "default_threshold" : 10,
+                "alert_validation_type" : "Passive",
+                "alert_validation_type_id" : "2"
+              },
+              "alert_type_id" : "4",
+              "alert_label" : "Rate of Data Change",
+              "enable_alert" : false,
+              "alert_type" : "rate_of_data_change"
+            },
+            "schema_drift" : {
+              "alert_config" : {
+                "default_threshold" : null,
+                "alert_validation_type" : null,
+                "alert_validation_type_id" : null
+              },
+              "alert_type_id" : "1",
+              "alert_label" : "Schema Drift",
+              "enable_alert" : false,
+              "alert_type" : "schema_drift"
+            },
+            "no_data_change" : {
+              "alert_config" : {
+                "default_threshold" : null,
+                "alert_validation_type" : null,
+                "alert_validation_type_id" : null
+              },
+              "alert_type_id" : "2",
+              "alert_label" : "No Data Change",
+              "enable_alert" : false,
+              "alert_type" : "no_data_change"
+            },
+            "row_count" : {
+              "alert_config" : {
+                "default_threshold" : 10,
+                "alert_validation_type" : "Passive",
+                "alert_validation_type_id" : "2"
+              },
+              "alert_type_id" : "5",
+              "alert_label" : "Row Count",
+              "enable_alert" : false,
+              "alert_type" : "row_count"
+            },
+            "execution_time" : {
+              "alert_config" : {
+                "default_threshold" : 10,
+                "alert_validation_type" : "Passive",
+                "alert_validation_type_id" : "2"
+              },
+              "alert_type_id" : "6",
+              "alert_label" : "Execution Time",
+              "enable_alert" : false,
+              "alert_type" : "execution_time"
+            }
+          },
+          "pipeline_error_msg" : "",
+          "description" : "",
+          "workflow_engine_name" : "RPC_workflow_engine",
+          "contact_info" : {
+            "owner" : "MT4011",
+            "email" : "dheeraj.kusuri@modak.com"
+          },
+          "pipeline_form_default_values" : {
+            "default_pipeline_retry" : false,
+            "default_pipeline_flow_timeout" : 24,
+            "default_retry_count" : 0
+          },
+          "pipeline_name" : "Dataconnections test 1",
+          "tags" : [],
+          "compute_engine_name" : "CDE Spark 3",
+          "workspace_pipeline_type_id" : 1,
+          "engine_type" : "Spark",
+          "workflow_engine_id" : 28,
+          "engine_sub_type" : "CDE",
+          "engine_id" : 2,
+          "engine_type_id" : 2,
+          "workspace_pipeline_type_name" : "batch",
+          "compute_engine_id" : 566,
+          "engine_sub_type_id" : 3
+        },
+        "linkFromPortIdProperty" : "originPortId",
+        "class" : "go.GraphLinksModel"
+      }
+    }
+  ]
+}
